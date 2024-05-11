@@ -12,5 +12,5 @@
 // document.body.appendChild(component());
 
 $(document).on("knack-scene-render.any", function (event, scene) {
-  alert("Page rendered!");
+  console.log("Page rendered!");
 });

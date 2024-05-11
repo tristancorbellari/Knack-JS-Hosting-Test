@@ -1,1 +1,1 @@
-$(document).on("knack-scene-render.any",(function(e,n){alert("Page rendered!")}));
+$(document).on("knack-scene-render.any",(function(e,n){console.log("Page rendered!")}));
