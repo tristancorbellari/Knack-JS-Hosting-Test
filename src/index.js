@@ -10,4 +10,7 @@
 // }
 
 // document.body.appendChild(component());
-console.log("this is a test");
+
+$(document).on("knack-scene-render.any", function (event, scene) {
+  alert("Page rendered!");
+});
