@@ -3,4 +3,4 @@ function requireAll(r) {
 }
 requireAll(require.context("./", true, /\.js$/));
 
-let MAX_TRIES = 1;
+window.MAX_TRIES = 1;
