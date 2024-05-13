@@ -1,4 +1,6 @@
-function makeRequest(
+import { API_ID } from "../constants";
+
+export function makeRequest(
   requestType,
   sceneId,
   viewId,
@@ -67,7 +69,7 @@ function makeRequest(
   }
 }
 
-function postImage(img) {
+export function postImage(img) {
   var form = new FormData();
   form.append(`files`, img);
 
@@ -109,7 +111,7 @@ function postImage(img) {
   }
 }
 
-function runTask(appId, taskId) {
+export function runTask(appId, taskId) {
   let apiUrl = `https://us-east-1-renderer-read.knack.com/v1/applications/${appId}/tasks/${taskId}/runtaskjob`;
   let tries = 0;
 

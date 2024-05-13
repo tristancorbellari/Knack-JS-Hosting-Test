@@ -1,3 +1,5 @@
+import { makeRequest, postImage } from "./ajax_calls";
+
 function base64ImageToBlob(str) {
   // extract content type and base64 payload from original string
   var pos = str.indexOf(";base64,");
@@ -44,7 +46,7 @@ function base64ImageToBlob(str) {
  * @param {String}   gridsToRefresh      Names of the grids to refresh which displays the table where the images lie. Optional.
  *
  ******/
-function enableTextFieldImageAttachments(
+export function enableTextFieldImageAttachments(
   view,
   record,
   attachmentFields,
