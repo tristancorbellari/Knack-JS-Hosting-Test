@@ -2,6 +2,7 @@ import { enableTextFieldImageAttachments } from "../HelperFunctions/rtf_image_at
 
 $(document).on("knack-view-render.any", function (event, scene) {
   console.log("View rendered!");
+  console.log(maxTries);
 });
 
 // Byron's new feature editor: save images in body

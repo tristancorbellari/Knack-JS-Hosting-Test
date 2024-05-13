@@ -1,5 +1,7 @@
 import { API_ID } from "../constants";
 
+let maxTries = 1;
+
 export function makeRequest(
   requestType,
   sceneId,
