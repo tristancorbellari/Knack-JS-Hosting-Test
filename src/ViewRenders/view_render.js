@@ -1,5 +1,5 @@
 import { enableTextFieldImageAttachments } from "../HelperFunctions/rtf_image_attachments";
-import { MAX_TRIES } from "../constants";
+import { MAX_TRIES } from "../index";
 
 $(document).on("knack-view-render.any", function (event, scene) {
   console.log("View rendered!");

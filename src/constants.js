@@ -1,2 +1,1 @@
-const API_ID = '65a02d2554772c002b1956aa'
-let MAX_TRIES = 1;
+const API_ID = '65a02d2554772c002b1956aa';
