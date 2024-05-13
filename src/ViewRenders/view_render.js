@@ -3,7 +3,7 @@ import { MAX_TRIES } from "../index";
 
 $(document).on("knack-view-render.any", function (event, scene) {
   console.log("View rendered!");
-  console.log(MAX_TRIES);
+  console.log(window.MAX_TRIES);
 });
 
 // Byron's new feature editor: save images in body
