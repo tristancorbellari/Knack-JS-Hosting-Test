@@ -1,6 +1,4 @@
-import { API_ID } from "../constants";
-
-let maxTries = 1;
+import { API_ID, MAX_TRIES } from "../constants";
 
 export function makeRequest(
   requestType,
@@ -32,7 +30,7 @@ export function makeRequest(
   let apiUrl = `https://api.knack.com/v1/pages/${sceneId}/views/${viewId}/records${recordId}${filters}${sceneUrl}`;
   let tries = 0;
 
-  while (tries < maxTries) {
+  while (tries < MAX_TRIES) {
     try {
       return new Promise(function (resolve, reject) {
         var ajaxCall = function () {
@@ -66,7 +64,7 @@ export function makeRequest(
     }
   }
 
-  if (tries === maxTries) {
+  if (tries === MAX_TRIES) {
     console.error("Max retries reached. Request failed.");
   }
 }
@@ -78,7 +76,7 @@ export function postImage(img) {
   let apiUrl = `https://api.knack.com/v1/applications/${API_ID}/assets/image/upload`;
   let tries = 0;
 
-  while (tries < maxTries) {
+  while (tries < MAX_TRIES) {
     try {
       return new Promise(function (resolve, reject) {
         $.ajax({
@@ -108,7 +106,7 @@ export function postImage(img) {
     }
   }
 
-  if (tries === maxTries) {
+  if (tries === MAX_TRIES) {
     console.error("Max retries reached. Request failed.");
   }
 }
@@ -117,7 +115,7 @@ export function runTask(appId, taskId) {
   let apiUrl = `https://us-east-1-renderer-read.knack.com/v1/applications/${appId}/tasks/${taskId}/runtaskjob`;
   let tries = 0;
 
-  while (tries < maxTries) {
+  while (tries < MAX_TRIES) {
     try {
       return new Promise(function (resolve, reject) {
         $.ajax({
@@ -143,7 +141,7 @@ export function runTask(appId, taskId) {
     }
   }
 
-  if (tries === maxTries) {
+  if (tries === MAX_TRIES) {
     console.error("Max retries reached. Request failed.");
   }
 }
