@@ -1,9 +1,9 @@
 import { enableTextFieldImageAttachments } from "../HelperFunctions/rtf_image_attachments";
-import { MAX_TRIES } from "../index";
+import { MAX_TRIES } from "../constants";
 
 $(document).on("knack-view-render.any", function (event, scene) {
   console.log("View rendered!");
-  console.log(window.MAX_TRIES);
+  console.log(MAX_TRIES);
 });
 
 // Byron's new feature editor: save images in body
